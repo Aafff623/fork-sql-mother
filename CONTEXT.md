@@ -1,24 +1,36 @@
 # SQL 之母 · Context
 
-## 定位
+## 一句话定位
 
-纯前端 SQL 自学应用，用 30+ 关卡、在线执行、提示与自由练习，把 SQL 入门变成可持续的实战路径。
+完全运行在浏览器中的闯关式 SQL 学习与自由练习应用。
 
-## 产品层根
+## 产品主链路
 
-src/ 应用 · public/ 静态资源 · doc/ 截图
+选择关卡 → 阅读任务 → 浏览器执行 SQL → 比对结果 → 查看提示 → 进入下一关。
 
-## 技术栈
+## 代码边界
 
-Vue 3 · TypeScript · Vite · Monaco Editor · sql.js
+src/core/ SQL 执行和状态；src/levels/ 教学关卡；src/components/ 交互；public/ 静态资源。
 
-## 阅读顺序
+## 技术与运行环境
 
-1. README 与根 manifest
-2. 用户入口 / API 入口
-3. 核心领域服务与数据模型
-4. 配置、测试与部署文件
+Vue 3、TypeScript、Vite、Pinia、Monaco Editor、sql.js。
 
-## 当前主题
+## 当前事实
 
-readme-refresh：只增强仓库可读性、协作资产与视觉呈现，不改变业务行为。
+- 当前二开维护者为 `threetwoa`。
+- `origin` 指向增强仓，`upstream` 指向原始项目。
+- 最近二开提交 `16d73d4` 完成身份迁移、营销清理、核心注释和 README 重构。
+- 上游里程碑：831988c：上游 README 更新；后续提交加入难度、自定义关卡与作者弹窗。
+
+## 关键风险
+
+sql.js 运行语义与真实数据库存在差异；关卡 SQL 是产品内容也是测试夹具；既有 SqlResult 类型需后续收敛。
+
+## 推荐阅读顺序
+
+1. README：产品定位与启动入口。
+2. 本文件与 `docs/agents/domain.md`：边界和术语。
+3. 入口模块与主链路服务。
+4. 配置、持久化、测试和部署文件。
+5. `docs/adr/` 与 `docs/output/handoff/`：决策和已交付变更。
