@@ -19,34 +19,16 @@
           <a-menu-item key="/learn">学习</a-menu-item>
           <a-menu-item key="/levels">关卡</a-menu-item>
           <a-menu-item key="/playground">广场</a-menu-item>
-          <a-menu-item>
-            <a href="https://www.code-nav.cn" target="_blank">
-              <a-badge
-                count="new"
-                size="small"
-                :offset="[16, 24]"
-                color="green"
-              >
-                编程导航
-              </a-badge>
-            </a>
-          </a-menu-item>
-          <a-menu-item>
-            <a href="https://www.mianshiya.com" target="_blank">
-              <solution-outlined />
-              面试真题
-            </a>
-          </a-menu-item>
           <a-menu-item key="about">
             <span @click.stop="showAboutModal" style="cursor: pointer; display: inline-block; width: 100%;">
               <user-outlined />
-              关于作者
+              关于项目
             </span>
           </a-menu-item>
           <a-menu-item>
-            <a href="https://github.com/liyupi/sql-mother" target="_blank">
+            <a href="https://github.com/Aafff623/fork-sql-mother" target="_blank">
               <github-outlined />
-              代码开源，欢迎 star
+              源代码
             </a>
           </a-menu-item>
         </a-menu>
@@ -57,20 +39,12 @@
     </div>
     <div class="footer">
       <p>
-        <a-space size="middle">
-          <a href="https://www.code-nav.cn" target="_blank">编程导航</a>
-          <a href="https://www.laoyujianli.com" target="_blank">写简历神器</a>
-          <a href="https://www.mianshiya.com" target="_blank">面试刷题</a>
-        </a-space>
-      </p>
-      <p>
-        SQL之母 - SQL 自学网站 ©{{ currentYear }} by
-        <a href="https://github.com/liyupi" target="_blank">程序员鱼皮</a>
+        SQL之母 ©{{ currentYear }} · 由 threetwoa 维护
       </p>
     </div>
     <a-back-top :style="{ right: '24px' }" />
     
-    <!-- 关于作者弹窗组件 -->
+    <!-- 项目信息使用独立弹窗，避免导航层承担详细文案。 -->
     <AboutAuthorModal v-model:visible="aboutModalVisible" />
   </div>
 </template>
@@ -80,8 +54,6 @@ import { computed, ref } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { 
   GithubOutlined, 
-  BookOutlined, 
-  SolutionOutlined, 
   UserOutlined 
 } from "@ant-design/icons-vue";
 import AboutAuthorModal from "./components/AboutAuthorModal.vue";
@@ -90,7 +62,7 @@ const route = useRoute();
 const router = useRouter();
 const selectedKeys = computed(() => [route.path]);
 
-// 获取当前年份
+// 年份在跨年后自动更新，不需要手工修改页脚。
 const currentYear = computed(() => new Date().getFullYear());
 
 const aboutModalVisible = ref(false);
@@ -100,6 +72,7 @@ const showAboutModal = () => {
 };
 
 const doClickMenu = ({ key }: any) => {
+  // about 菜单只控制弹窗，其余键值与路由路径保持一致。
   if (key && key !== "about") {
     router.push({
       path: key,

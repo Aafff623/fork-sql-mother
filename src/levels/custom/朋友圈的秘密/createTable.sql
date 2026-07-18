@@ -15,7 +15,7 @@ CREATE TABLE if not exists weibo_posts (
 
 INSERT INTO weibo_posts (post_id, user_id, username, content_type, topic_category, publish_time, likes_count, comments_count, reposts_count, followers_count, has_image, has_video) VALUES
 -- 科技类微博
-(1, 1001, '鱼皮', '原创', '科技', '2024-01-01 10:00:00', 1200, 300, 150, 50000, 1, 0),
+(1, 1001, 'threetwoa', '原创', '科技', '2024-01-01 10:00:00', 1200, 300, 150, 50000, 1, 0),
 (2, 1002, '程序员小张', '原创', '科技', '2024-01-02 14:30:00', 800, 200, 100, 30000, 0, 1),
 (3, 1003, '前端大神', '转发', '科技', '2024-01-03 09:15:00', 500, 80, 200, 25000, 1, 0),
 (4, 1004, 'AI研究员', '原创', '科技', '2024-01-04 16:45:00', 2000, 500, 300, 80000, 1, 1),

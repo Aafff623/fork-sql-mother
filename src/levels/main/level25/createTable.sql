@@ -12,7 +12,7 @@ create table if not exists `student`
 insert into `student` (`name`, `age`, `class_id`, `score`, `exam_num`)
 values ('鸡哥', 25, 1, 2.5, 1);
 insert into `student` (`name`, `age`, `class_id`, `score`, `exam_num`)
-values ('鱼皮', 18, 1, 400, 4);
+values ('threetwoa', 18, 1, 400, 4);
 insert into `student` (`name`, `age`, `class_id`, `score`, `exam_num`)
 values ('热dog', 40, 2, 600, 4);
 insert into `student` (`name`, `age`, `class_id`, `score`, `exam_num`)
@@ -48,4 +48,4 @@ values ('新学生2', 21, 2, 180, 2);
 insert into `student_new` (`name`, `age`, `class_id`, `score`, `exam_num`)
 values ('鸡哥', 25, 1, 2.5, 1);
 insert into `student_new` (`name`, `age`, `class_id`, `score`, `exam_num`)
-values ('鱼皮', 18, 1, 400, 4);
+values ('threetwoa', 18, 1, 400, 4);

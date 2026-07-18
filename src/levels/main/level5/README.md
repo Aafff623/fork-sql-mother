@@ -57,5 +57,5 @@ select name, price, stock from products where stock <= 20;
 
 ## 题目
 
-请编写一条 SQL 查询语句，从名为`student` 的数据表中选择出所有学生的姓名（name）和成绩（score），要求学生姓名为 '鱼皮'。
+请编写一条 SQL 查询语句，从名为`student` 的数据表中选择出所有学生的姓名（name）和成绩（score），要求学生姓名为 'threetwoa'。
 

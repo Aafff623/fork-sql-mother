@@ -7,7 +7,7 @@ export default {
   initSQL: sql,
   content: md,
   defaultSQL: "select * from student",
-  answer: "select name, score from student where name = '鱼皮'",
+  answer: "select name, score from student where name = 'threetwoa'",
   hint: "请仔细查看本关给出的示例",
   type: "main",
 } as LevelType;

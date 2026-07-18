@@ -2,8 +2,8 @@ import md from "./README.md?raw";
 import sql from "./createTable.sql?raw";
 
 export default {
-  key: "yupi_content_analysis",
-  title: "鱼皮的数据江湖",
+  key: "threetwoa_content_analysis",
+  title: "threetwoa的数据江湖",
   initSQL: sql,
   content: md,
   defaultSQL: "select * from content_posts",

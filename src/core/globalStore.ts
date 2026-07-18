@@ -2,19 +2,18 @@ import { defineStore } from "pinia";
 import { allLevels } from "../levels";
 
 /**
- * 全局状态存储
- *
- * @author yupi
+ * 保存跨页面的学习进度和当前关卡。
+ * Pinia 持久化插件会将状态写入 localStorage，因此该 store 只能在浏览器环境初始化。
  */
 export const useGlobalStore = defineStore("global", {
   state: () => ({
-    // 学习记录
+    // 保留每个关卡的完成情况，用于进度视图和恢复学习位置。
     studyHistoryList: [],
-    // 当前关卡
+    // 拷贝默认关卡，避免组件修改关卡注册表的共享对象。
     currentLevel: { ...allLevels[0] },
   }),
   getters: {},
-  // 持久化
+  // 使用稳定键名保持旧版本的本地学习记录可继续读取。
   persist: {
     key: "global",
     storage: window.localStorage,
