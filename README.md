@@ -21,6 +21,8 @@ SQL之母是面向 SQL 初学者的纯前端练习环境。关卡提供数据、
 
 ## 能力矩阵
 
+<p align="center"><img src="assets/images/readme/features.png" alt="核心能力总览" width="100%"></p>
+
 | 能力 | 实现 | 边界 |
 |---|---|---|
 | 渐进关卡 | 主线与自定义关卡 | 题目与初始化 SQL 随前端发布 |
@@ -28,6 +30,10 @@ SQL之母是面向 SQL 初学者的纯前端练习环境。关卡提供数据、
 | SQL 编辑 | Monaco Editor | 不连接远程生产库 |
 | 进度恢复 | Pinia + localStorage | 仅当前浏览器 |
 | 结果展示 | 表格化多结果集 | 错误保留 sql.js 语义 |
+
+## 主链路
+
+<p align="center"><img src="assets/images/readme/workflow.png" alt="产品主链路" width="100%"></p>
 
 ## 快速开始
 
@@ -44,7 +50,13 @@ npm run dev
 npm run build
 ```
 
+## 技术栈
+
+<p align="center"><img src="assets/images/readme/tech-stack.png" alt="技术栈分层" width="100%"></p>
+
 ## 架构
+
+<p align="center"><img src="assets/images/readme/architecture.png" alt="系统架构" width="100%"></p>
 
 ```text
 Vue Pages / Components
@@ -66,11 +78,31 @@ sqlExecutor → sql.js / SQLite WASM → result tables
 
 ## 模块阅读顺序
 
+<p align="center"><img src="assets/images/readme/structure.png" alt="仓库目录结构" width="100%"></p>
+
 1. `src/App.vue` — 应用壳与路由入口。
 2. `src/levels/index.ts` — 关卡注册与前后导航。
 3. `src/core/globalStore.ts` — 跨页面学习状态。
 4. `src/core/sqlExecutor.ts` — SQL 运行时边界。
 5. `src/pages/` — 用户操作如何组合上述模块。
+
+## 产品画册
+
+| 首页 | 闯关教程 | 关卡选择 |
+|:---:|:---:|:---:|
+| [![首页](doc/index.png)](doc/index.png) | [![教程](doc/tutorial.png)](doc/tutorial.png) | [![关卡](doc/levels.png)](doc/levels.png) |
+| SQL Playground | 题目助手 | 自定义关卡 |
+| [![Playground](doc/sql-playground.png)](doc/sql-playground.png) | [![助手](doc/helpboard.png)](doc/helpboard.png) | [![自定义关卡](doc/customLevel.png)](doc/customLevel.png) |
+
+## 视觉画册
+
+点击缩略图可查看原始矢量图：
+
+| | |
+|:---:|:---:|
+| [![Features](assets/images/readme/features.png)](assets/images/readme/features.svg)<br>**Features** · 核心能力 | [![Architecture](assets/images/readme/architecture.png)](assets/images/readme/architecture.svg)<br>**Architecture** · 系统边界 |
+| [![Tech Stack](assets/images/readme/tech-stack.png)](assets/images/readme/tech-stack.svg)<br>**Tech Stack** · 技术分层 | [![Workflow](assets/images/readme/workflow.png)](assets/images/readme/workflow.svg)<br>**Workflow** · 主链路 |
+| [![Structure](assets/images/readme/structure.png)](assets/images/readme/structure.svg)<br>**Structure** · 仓库地图 | |
 
 ## 维护与上游
 
