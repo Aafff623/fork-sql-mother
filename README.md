@@ -106,7 +106,7 @@ sqlExecutor → sql.js / SQLite WASM → result tables
 
 ## 维护与上游
 
-当前二次开发版本由 **threetwoa** 维护。上游项目为 [liyupi/sql-mother](https://github.com/liyupi/sql-mother)；上游引用仅用于溯源，许可与第三方声明以仓库文件为准。
+原作者：**李鱼皮（[liyupi](https://github.com/liyupi)）**。当前二次开发版本由 **threetwoa** 维护。上游项目为 [liyupi/sql-mother](https://github.com/liyupi/sql-mother)；上游引用仅用于溯源，许可与第三方声明以仓库文件为准。
 
 ## 许可证
 
